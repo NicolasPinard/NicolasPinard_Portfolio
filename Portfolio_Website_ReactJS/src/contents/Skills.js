@@ -5,8 +5,8 @@ class Skills extends Component {
     {
         super(props);
         this.state={
-            'languages':['Java','Python','SQL','JavaScript','C','Go','Scala','C#','Terraform'],
-            'frameworks': ['AWS','Spark','Airflow','Hadoop','Impala','Hive']
+            'languages':['Java','Python','SQL','Bash','JavaScript','C','C#','Go','Scala','C#','Terraform'],
+            'frameworks': ['AWS','Spark','Airflow','Docker','Hadoop','Impala','Hive']
         };
     }
 

@@ -96,8 +96,8 @@ class About extends Component {
                     sh#t done! The previous interns started a test automation framework, however it needed some love and more features.
                     During that internship, I learned to code in Python, Bash and use Jenkins. More importantly, I underestimated tasks,
                     tried to solve problems on my own for too long and created false expectations in stakeholders of other teams. This 
-                    is more important, because I learned much more from that than from the good which I swear I a lot more value than 
-                    harm!</p>
+                    is more important, because I learned much more from that than from the good, but I swear I created a lot more value 
+                    than harm!</p>
                     </TimelineItem>
                     <TimelineItem
                     key="005"
@@ -108,7 +108,14 @@ class About extends Component {
                     padding: '20px',
                     borderRadius: '8px',
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)'}}>
-
+                    <h4>Getting out of my comfort zone</h4>
+                    <p>So far everything was going smoothly, classes seemed much easier than at the start and I didn't have any issues
+                    finding internships during the summer. I always wanted to do a session abroad, but unfortunately my school tightened
+                    what course could be accepted to get credit for an engineering class. So, that closed up a lot of universities that 
+                    had Computer Science program but not Software Engineering. I ended up doing an exchange at the University of British 
+                    Columbia in Vancouver and could only get 3 class accreditated. I thought I was going to have an easy time and have 
+                    plenty of time to visit the places around. But unfortunately (or fortunately), those 3 classes were the hardest that 
+                    I have ever taken. Two of them, </p>
                     </TimelineItem>
                     <TimelineItem>
                         

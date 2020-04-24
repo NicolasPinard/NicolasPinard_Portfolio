@@ -24,7 +24,8 @@ nav
 {
   padding:60px 30px 0px 30px ;
   flex:var(--sidebar-flex);
-  background: linear-gradient(180deg, rgb(226,101,60) 10%, rgb(226,214,89) 90%);
+  /* background: linear-gradient(180deg, rgb(226,62,62) 0%, rgb(226,226,62) 100%); */
+  background: linear-gradient(180deg, rgb(252,3,3) 0%, rgb(123,123,3) 50%, rgb(3,123,3) 100%);
 }
 .compdet
 {

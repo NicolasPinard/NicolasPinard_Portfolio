@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+Portfolio_Website_ReactJS/node_modules
 
 # testing
 /coverage

@@ -1,12 +1,72 @@
 import React, { Component } from 'react';
 import Widecard from '../components/Widecard';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import ExperienceCard from '../components/ExperienceCard';
 
 class Experience extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {experiences: []};
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:8080/experiences', {
+            method: 'GET'
+        })
+        .then(results => results.json())
+        .then((arr) => {
+            this.setState({ experiences: arr })
+        })
+        .catch(console.log)
+
+    }
+
     render() {
         return (
             <div className="condiv">
             <h1 className="subtopic">My Experience</h1>
+            <div>
+            <Timeline lineColor={'#ddd'}>
+            {
+                this.state.experiences.map((exp) => {
+                    console.log(exp)
+                    return (
+                        <TimelineItem 
+                            key="001" 
+                            dateText="February 2019 -" 
+                            style={{ color: '#e86971', width: '100%' }}
+                            bodyContainerStyle={{
+                            background: '#ddd',
+                            padding: '20px',
+                            borderRadius: '8px',
+                            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+                            width: '100%'
+                        }}>
+                            <h3>{exp.Title}</h3><br/>
+                            <h4>Responsabilities</h4>
+                            <ul className="highlight">
+                                {/* {exp.Responsabilities.map((r) => {
+                                    return (
+                                        <li></li>
+                                    )
+                                })} */}
+                            </ul><br/>
+
+                            <h4>Achievements</h4>
+                            <ul className="highlight">
+                                {/* exp.Achievements.map((a) => {
+                                        return (
+                                            <li></li>
+                                        )
+                                    }) */
+                                }
+                            </ul>
+                        </TimelineItem>
+                    )
+                })
+            }
+            </Timeline>
+            </div>
             <Timeline lineColor={'#ddd'}>
                 <TimelineItem 
                         key="001" 

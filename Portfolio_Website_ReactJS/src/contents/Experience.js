@@ -31,37 +31,7 @@ class Experience extends Component {
                 this.state.experiences.map((exp) => {
                     console.log(exp)
                     return (
-                        <TimelineItem 
-                            key="001" 
-                            dateText="February 2019 -" 
-                            style={{ color: '#e86971', width: '100%' }}
-                            bodyContainerStyle={{
-                            background: '#ddd',
-                            padding: '20px',
-                            borderRadius: '8px',
-                            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-                            width: '100%'
-                        }}>
-                            <h3>{exp.Title}</h3><br/>
-                            <h4>Responsabilities</h4>
-                            <ul className="highlight">
-                                {/* {exp.Responsabilities.map((r) => {
-                                    return (
-                                        <li></li>
-                                    )
-                                })} */}
-                            </ul><br/>
-
-                            <h4>Achievements</h4>
-                            <ul className="highlight">
-                                {/* exp.Achievements.map((a) => {
-                                        return (
-                                            <li></li>
-                                        )
-                                    }) */
-                                }
-                            </ul>
-                        </TimelineItem>
+                        <ExperienceCard key={exp.ID} exp={exp}/>
                     )
                 })
             }
@@ -86,8 +56,8 @@ class Experience extends Component {
                         big data of the capital markets industry leveraging technoogies such as Apache Spark, 
                         Hadoop, Impala and Hive.</li>
 
-                        <li>Debug, maintain and improve Spring Boot microservices and APIs handling queuing, 
-                        metadata generation, data compression and autoscaling of the ETL jobs</li>
+                        <li>Debug, maintain and refactor Spring Boot microservices and APIs handling queuing, 
+                        data compression and autoscaling of the ETL jobs as well as data ingestion and distribution.</li>
                         
                         <li>Participate in team rituals, communicate effectively in a multi-disciplinary team, 
                         support and empower colleagues.</li>

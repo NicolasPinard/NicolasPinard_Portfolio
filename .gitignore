@@ -3,6 +3,7 @@
 # dependencies
 /.pnp
 .pnp.js
+Portfolio_Website_ReactJS/node_modules/.cache/
 
 # testing
 /coverage

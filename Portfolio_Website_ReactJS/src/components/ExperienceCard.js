@@ -1,38 +1,34 @@
 import React, { Component } from 'react'
-import { render } from '@testing-library/react';
 import { TimelineItem } from 'vertical-timeline-component-for-react';
 
 class ExperienceCard extends Component {
     render() {
         {
-            var style
+            var color
             var dateStyle
-            if(this.props.key % 2 == 0){
-                style = { color: '#e86971' }
+            if(this.props.expNum % 2 == 0){
+                color = { color: '#e86971' }
             } else {
-                style = { color: "#61b8ff"}
+                color = { color: "#61b8ff"}
                 dateStyle = { background: '#61b8ff', color: '#000' }
             }
+            var counter = 0
         }
         return(
         <TimelineItem 
-            key={this.props.key} 
+            key={this.props.expNum} 
             dateText={this.props.exp.Date} 
-            style={{ color: '#e86971', width: '100%' }}
-            bodyContainerStyle={{
-            background: '#ddd',
-            padding: '20px',
-            borderRadius: '8px',
-            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-            width: '100%'
-        }}>
+            dateInnerStyle={dateStyle}
+            style={{color}}
+            bodyContainerStyle={getBodyStyle()}
+        >
             <h3>{this.props.exp.Title}</h3><br/>
-            <h4>Responsabilities</h4>
+            <h4>Responsibilities</h4>
             <ul className="highlight">
             {
-                this.props.exp.Responsabilities.split('\n').map((r) => {
+                this.props.exp.Responsibilities.split('\n').map((resp) => {
                     return (
-                        <li>{r}</li>
+                        <li key = {(counter++) + ""}>{resp}</li>
                     )
                 })
             }
@@ -40,9 +36,9 @@ class ExperienceCard extends Component {
 
             <h4>Achievements</h4>
             <ul className="highlight">
-                {this.props.exp.Achievements.split('\n').map((a) => {
+                {this.props.exp.Achievements.split('\n').map((achieve) => {
                     return (
-                        <li>{a}</li>
+                        <li key = {(counter++) + ""}>{achieve}</li>
                         )
                     })
                 }
@@ -52,6 +48,17 @@ class ExperienceCard extends Component {
     
         )
     }
+}
+
+function getBodyStyle() {
+    var style = {
+        background: '#ddd',
+        padding: '20px',
+        borderRadius: '8px',
+        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+        width: '100%'
+    }
+    return style
 }
 
 export default ExperienceCard

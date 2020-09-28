@@ -8,38 +8,27 @@ class SkillBar extends Component {
 
     render() {
         return (
-            <div className="SkillBar" style={{margin: `10px`, height: `64px`, background: `#eee`}}>
+            <div className="skillbar">
               <div
-               style={{display: `inline-block`, width: `64px`, height:`inherit`, verticalAlign: `baseline`}}>
+               className="skillbar-icon">
                 <img src={this.props.icon} alt="icon"/>
               </div>
               <div
                 className="skillbar-title"
                 style={{
                   color: `${this.props.font || '#FFF'}`,
-                  background: `${this.getNewColor(this.props.color || 'rgb(62,252,122)', 1)}`,
-                  fontWeight: `600`,
-                  width: `110px`,
-                  height: `inherit`,
-                  display: `inline-block`,
-                  verticalAlign: `top`
+                  background: `${this.getNewColor(this.props.color || 'rgb(62,252,122)', 1)}`
                 }}
               >
-                <p style = {{
-                  paddingLeft: `10px`,
-                  verticalAlign: `middle`,
-                  fontSize: `1em`
-                }}>{this.props.name || ''}</p>
+                <p className="skillbar-title-content">{this.props.name || ''}</p>
               </div>
               <div
+                className="skillbar-bar"
                 style={{
                   background: `${this.getNewColor(this.props.color || 'rgb(62,252,122)', (this.props.level || 0)/100)}`,
                   width: `calc((100% - 174px) * (${this.props.level || 0} * 0.01))`,
-                  height: `inherit`,
-                  transition: `width ${this.props.animationDuration}ms ease-in-out`,
-                  display: `inline-block`
+                  transition: `width ${this.props.animationDuration}ms ease-in-out`
                 }}>
-              <div className="skillbar-percent" style={{float: `right`}}>{this.props.level}%</div>
               </div>
             </div>
         )

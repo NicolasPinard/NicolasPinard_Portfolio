@@ -74,7 +74,7 @@ nav ul li
 
 a
 {
-  text-decoration: none;
+  text-decoration-line: none;
   color: white;
 }
 
@@ -110,6 +110,39 @@ h1,h2,h3,h4,p{
 {
   color: #ffffff;
 }
+.skillbar
+{
+  margin: 10px;
+  height: 64px;
+  background: #eee
+}
+.skillbar-bar
+{
+  height: inherit;
+  display: inline-block;
+}
+.skillbar-icon
+{
+  display: inline-block;
+  width: 64px;
+  height: inherit;
+  vertical-align: baseline
+}
+.skillbar-title 
+{
+  font-weight: 600;
+  width: 110px;
+  height: inherit;
+  display: inline-block;
+  vertical-align: top
+}
+.skillbar-title-content
+{
+  padding-left: 10px;
+  vertical-align: middle;
+  font-size: 1em
+}
+
 .widecard
 {
   border:0px solid #9a9b9c;
@@ -126,7 +159,14 @@ h1,h2,h3,h4,p{
   font-size: 24px;
   width: 70%;
   text-align: left;
+  color: #1b1d20;
 }
+.widecardlink
+{
+  color: #59626e;
+  font-style: bold;
+}
+
 .active
 {
   font-weight: bolder;
